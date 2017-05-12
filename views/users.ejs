@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="/stylesheets/folder/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/stylesheets/folder/css/bootstrap.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <div class="container">
+  <h1 class="">HALAMAN INPUT USER</h1>
+
+  <div class="row">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Nama</th>
+          <th>Alamat</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% let i=1; data.forEach((tampil) =>{
+        %>
+        <tr>
+          <th><%= i++ %></th>
+          <th><%= tampil.name %></th>
+          <th><%= tampil.alamat %></th>
+          <th><a href="/users/delete/<%= tampil.id %>"onclick="return confirm('Delete')">Delete</a> <a href="/users/edit/<%= tampil.id %>">Edit</a></th>
+        </tr>
+      </tbody>
+      <%   }) %>
+    </table>
+  </div>
+
+    </div>
+
+  </body>
+</html>

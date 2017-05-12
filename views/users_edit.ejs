@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>HALAMAN EDIT</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="/stylesheets/folder/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/stylesheets/folder/css/bootstrap.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+
+          <h1>HALAMAN EDIT USER</h1>
+          <form class="form-group" action="/users/update/<%= data.id %>" method="post">
+            <input type="text" name="name" value="<%=data.name %>">
+            <input type="text" name="alamat" value="<%=data.alamat %>" >
+            <td><button type="submit" class="btn btn-success" >SAVE</button></td>
+          </form>
+
+
+      </div>
+    </div>
+
+  </body>
+</html>
