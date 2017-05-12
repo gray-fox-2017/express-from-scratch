@@ -1,0 +1,42 @@
+<html>
+  <head>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+  </head>
+  <body>
+    <h1>Home</h1>
+    <div class="container">
+
+      <div class="section">
+        <h5>Users</h5>
+        <p>List User</p>
+      </div>
+      <div class="md8">
+        <table class="striped">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Username</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% users.forEach( (user)=>{ %>
+            <tr>
+             <td><%= user.id %></td>
+             <td><%= user.name %></td>
+             <td><a href="user/edit/<%= user.id%>" class="btn" target="_blank"><i class="material-icons">Edit</i></a><a href="user/delete/<%= user.id%>" class="btn red" target="_self">Delete</a></td>
+            </tr>
+            <% }); %>
+          </tbody>
+        </table>
+      </div>
+      <form method="get" action="/User/">
+        <input type ="submit" value="Insert new user" class="btn-large">
+      <form>
+    </div>
+
+
+  </body>
+</html>

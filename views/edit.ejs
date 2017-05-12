@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Edit <%= users.id%></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Insert User</h1>
+      <div class="rows md8">
+        <form method="post" action="/user/edit/<%=users.id %>">
+          <label for="txtID">ID</label>
+          <input type="text" name="txtID" id="txtID" readOnly value="<%= users.id %>"></input>
+          <label for="txtName"></label>
+          <input type="text" name="txtName" id="txtName"required value="<%= users.name %>"></input>
+          <input type="submit" value="Submit" class="btn btn-large">
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
