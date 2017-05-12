@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Is Not My First Website</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+  </head>
+  <body>
+    <h2 align='center'>INPUT HERE!</h2>
+      <form class="" action="/add" method="post">
+        <table class="responsive-table" style="width:60%" align='center'>
+          <thead>
+            <tr>
+
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input type="text" name="name" value="" placeholder="Input Your Name.."></td>
+              <td><input type="text" name="email" value="" placeholder="Input Your Email.."></td>
+              <td><input type="text" name="subject" value="" placeholder="Input Your Subject.."></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td><center><button type="submit" name="submit">SUBMIT</button></center></td>
+                <td></td>
+            </tr>
+          </tbody>
+        </table>
+        <hr style="width:70%">
+        <h3 align='center'>YOUR DATA!</h3>
+        <table class="striped" style="width:60%" align='center'>
+          <thead>
+            <tr>
+              <td>ID</td>
+              <td>NAME</td>
+              <td>EMAIL</td>
+              <td>SUBJECT</td>
+              <td>ACTION</td>
+            </tr>
+          </thead>
+          <tbody>
+            <%
+                data.forEach((value) => {
+            %>
+            <tr>
+              <td><%= value.id%></td>
+              <td><%= value.name%></td>
+              <td><%= value.email%></td>
+              <td><%= value.subject%></td>
+              <td><a href="/edit/<%=value.id%>">EDIT</a> | <a href="/delete/<%=value.id%>">DELETE</a></td>
+            </tr>
+            <%
+                })
+            %>
+
+          </tbody>
+        </table>
+      </form>
+
+
+
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
