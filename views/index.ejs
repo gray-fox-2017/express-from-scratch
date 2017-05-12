@@ -22,10 +22,10 @@
                 <td><%= user.username %></td>
                 <td><%= user.email %></td>
                 <td><a href = "/user/edit/<%= user.id %>"><button class="btn btn-info"> Edit </button></a>
-                <button class="btn btn-danger" data-toggle="modal" data-target="#myModal"> Delete </button></td>
+                <button class="btn btn-danger" data-toggle="modal" data-target="#<%= user.id %>"> Delete </button></td>
               </tr>
               <!-- Modal -->
-              <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal fade" id="<%= user.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -33,11 +33,11 @@
                       <h4 class="modal-title" id="myModalLabel">Delete Data</h4>
                     </div>
                     <div class="modal-body">
-                      Are you sure for the Delete ?
+                      Are you sure for the Delete <%= user.id %> ?
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-                      <a href="/user/delete/<%= user.id %>"> <button type="button" name="id" class="btn btn-danger">Delete</button></a>
+                      <a href="/user/delete/<%= user.id %>"> <button type="button" class="btn btn-danger">Delete</button></a>
                     </div>
                   </div>
                 </div>
