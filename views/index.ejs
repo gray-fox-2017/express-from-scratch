@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <script   src="https://code.jquery.com/jquery-3.2.1.js"   integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="   crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h3>LIST USER</h3>
+      <table class="striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Option</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% data.forEach((d) => {  %>
+          <tr>
+            <td><%= d.id %></td>
+            <td><%= d.username %></td>
+            <td><%= d.email %></td>
+            <td>
+              <a href='/user/edit/<%= d.id %>'><button type="button" name="edit" class="waves-effect waves-light btn">edit</button></a>
+              <a class="waves-effect waves-light btn" href="#modal<%= d.id %>">delete</a>
+            </td>
+          </tr>
+          <div id="modal<%= d.id %>" class="modal">
+            <div class="modal-content">
+              <h5>Delete this User?</h5>
+              <h6><%= d.username %></h6>
+            </div>
+            <div class="modal-footer">
+              <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">NO</a>
+              <a href="/user/delete/<%= d.id %>" class="modal-action waves-effect waves-green btn-flat" method="post">YES</a>
+            </div>
+          </div>
+          <% }) %>
+        </tbody>
+      </table>
+      <!-- Modal Structure -->
+
+      <hr style="margin-top: 40px">
+      <h4>New user</h4>
+      <form class="" action="/user" method="post">
+        <div class="row">
+          <div class="input-field col s6">
+            <input type="text" id="userName" name="username" value="">
+            <label for="userName">Username</label>
+          </div>
+          <div class="input-field col s6">
+            <input type="text" id="email" name="email" value="">
+            <label for="email">email</label>
+          </div>
+        </div>
+        <button class="waves-effect waves-light btn" type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+  <script type="text/javascript">
+    $(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal').modal();
+    });
+  </script>
+</html>
