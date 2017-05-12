@@ -21,6 +21,9 @@
   },
   "homepage": "https://github.com/gray-fox-2017/express-from-scratch#readme",
   "dependencies": {
-    "express": "^4.15.2"
+    "express": "^4.15.2",
+    "sequelize": "^3.30.4",
+    "sequelize-cli": "^2.7.0",
+    "sqlite3": "^3.1.8"
   }
 }
