@@ -9,10 +9,12 @@
 
     <div class="container">
       <h1>Insert User</h1>
+      <h5 class="red"><%= error%></h5>
       <div class="rows md8">
-        <form method="post" action="insert">
+        <form method="post" action="">
           <label for="txtName"></label>
-          <input type="text" name="name" id="name" placeholder="Insert Name"required></input>
+          <input type="text" name="name" placeholder="Insert Name"required></input>
+          <input type="email" name="email" required placeholder="Insert Email"></input>
           <input type="submit" value="Submit" class="btn btn-large">
         </form>
     </div>

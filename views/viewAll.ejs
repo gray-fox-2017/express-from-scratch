@@ -1,6 +1,7 @@
 <html>
   <head>
-
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
   </head>
@@ -26,13 +27,16 @@
             <tr>
              <td><%= user.id %></td>
              <td><%= user.name %></td>
-             <td><a href="user/edit/<%= user.id%>" class="btn" target="_blank"><i class="material-icons">Edit</i></a><a href="user/delete/<%= user.id%>" class="btn red" target="_self">Delete</a></td>
+             <td><%= user.email%></td>
+             <td>
+               <a href="user/edit/<%= user.id%>" class="btn" target="_blank"><i class="material-icons">mode_edit</i></a>
+               <a href="user/delete/<%= user.id%>" class="btn red" target="_self" onclick="return confirm('Are you sure?')"><i class="material-icons">delete</i></a></td>
             </tr>
             <% }); %>
           </tbody>
         </table>
       </div>
-      <form method="get" action="/User/">
+      <form method="get" action="/User/insert/">
         <input type ="submit" value="Insert new user" class="btn-large">
       <form>
     </div>

@@ -3,12 +3,15 @@ const express = require('express');
 const db = require('../models');
 let router = express.Router();
 
-router.get('/',(req,res) => {
-  res.render('insert',{});
+router.get('/insert',(req,res) => {
+  res.render('insert',{error:''});
 });
 
 router.post('/insert',(req,res)=>{
-  db.User.insertNew(req.body,()=> {res.redirect('/');});
+  db.User.insertNew(req.body,
+    ()=> {res.redirect('/');},
+    (err)=>{res.render('insert',{error:err})}
+  );
 });
 
 router.get('/edit/:id',(req,res,next)=>{
@@ -21,11 +24,17 @@ router.get('/edit/:id',(req,res,next)=>{
 router.post('/edit/:id',(req,res,next)=>{
   let id = req.body.txtID || '';
   let name = req.body.txtName || '';
+  let email = req.body.txtEmail || '';
   let user = {
     id:id,
-    name:name
+    name:name,
+    email:email
   }
-  db.User.updateData(user,()=>{res.redirect('../../')})
+  // res.send(user);
+  db.User.updateData(user,
+    ()=>{res.redirect('../../')}
+    // ,(err)=>{res.render(`edit/${id}`)}
+  )
 });
 
 

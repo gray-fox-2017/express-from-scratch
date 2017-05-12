@@ -7,13 +7,14 @@
   </head>
   <body>
     <div class="container">
-      <h1>Insert User</h1>
+      <h1>Edit User</h1>
       <div class="rows md8">
         <form method="post" action="/user/edit/<%=users.id %>">
           <label for="txtID">ID</label>
           <input type="text" name="txtID" id="txtID" readOnly value="<%= users.id %>"></input>
           <label for="txtName"></label>
-          <input type="text" name="txtName" id="txtName"required value="<%= users.name %>"></input>
+          <input type="text" name="txtName"required value="<%= users.name %>"></input>
+          <input type="email" name="txtEmail" required value="<%= users.email %>"></input>
           <input type="submit" value="Submit" class="btn btn-large">
         </form>
       </div>
