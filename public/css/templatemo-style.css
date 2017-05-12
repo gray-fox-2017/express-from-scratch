@@ -283,6 +283,14 @@ h2.subtitle {
   text-transform: uppercase;
   margin-bottom: 60px;
 }
+td.collumn {
+  font-size: 15px;
+  font-family: 'robotobold';
+  text-transform: uppercase;
+  margin: 4px, 10px, 60px, 70px; 
+  color: white; 
+}
+
 
 /*---------------------------------------------------------
  3. Header
