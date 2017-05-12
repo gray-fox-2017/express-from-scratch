@@ -3,7 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 let app = express();
 // import from routes folder
-// const index = require('./routes');
+const index = require('./routes');
 const user = require('./routes/user')
 
 
@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 // app.use(express.static('./public'))
 
-// app.use('/', index);
+app.use('/', index);
 app.use('/user', user);
 
 
