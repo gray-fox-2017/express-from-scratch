@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Edit User <%= user.id%></title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <h1>Edit User <%= user.id%></h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12">
+                <form class="" action="" method="post">
+                    <input type="text" name="username" value="<%- user.username %>" placeholder="Username">
+                    <input type="email" name="email" value="<%- user.email %>" placeholder="Email">
+                    <div class="col">
+                        <button type="submit" class="waves-effect waves-light btn-large">Submit</button>
+                        <a href="/user" class="waves-effect waves-light btn-large red">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        </div>
+    </body>
+</html>

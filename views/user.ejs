@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Hacktiv8 User</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Hacktiv8 Users:</h1>
+        <div class="row">
+            <div class="col s12">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Username</th>
+                            <th>Email</th>
+                            <th>Option</th>
+                        </tr>
+                    </thead>
+                <tbody>
+                    <% data.forEach(d => { %>
+                    <tr>
+                        <td><%- d.id %></td>
+                        <td><%- d.username %></td>
+                        <td><%- d.email %></td>
+                        <td><a class="waves-effect waves-light btn-large" href="./user/edit/<%- d.id %>">Edit</a>
+                        <a class="waves-effect waves-light btn-large red" href="./user/delete/<%- d.id %>" onclick="return confirm('Are you sure')">Delete</a></td>
+                    </tr>
+                    <%  })  %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12">
+            <a class="waves-effect waves-light btn-large" href="./user/create">Insert User</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
