@@ -24,6 +24,12 @@ routes.post('/add',function(request,response,next) {
   })
 })
 
+routes.get('/delete/id',function(request,response,next) {
+  db.User.delete({
+    where : {id : request.params.id}
+  })
+})
+
 
 
 module.exports = routes;
