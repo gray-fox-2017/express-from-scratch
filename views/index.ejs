@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My First Connection With Express</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+  <!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/fonts/roboto/Roboto-Bold.woff2">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.js"></script>-->
+  </head>
+  <body>
+    <div class="responsive-table">
+      <div class="z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 25px 20px 0px 28px; border: 1px solid #EEE;">
+        <form class="col s12" action="./user" method="post">
+          <div class="row">
+            <div class="input-field col s12">
+              <label for="name" data-error="wrong" data-success="right">Name</label>
+              <input id="name" name="name" type="text" class="validate">
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <label for="hobby" data-error="wrong" data-success="right">Hobby</label>
+              <input id="hobby" name="hobby" type="text" class="validate">
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <label for="username" data-error="wrong" data-success="right">User Name</label>
+              <input id="username" name="username" type="text" class="validate">
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <label for="email" data-error="wrong" data-success="right">Email</label>
+              <input id="email" name="email" type="email" class="validate">
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <button type="submit" name="button">submit</button>
+            </div>
+        </div>
+      </form>
+     </div>
+  </div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+  </body>
+</html>
