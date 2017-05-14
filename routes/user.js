@@ -1,12 +1,17 @@
 const express = require('express');
 const routes = express.Router();
+const bodyParser = require('body-parser');
 
-routes.get('/',function(request,response,next) {
-  response.send("Testing on user")
+routes.use(bodyParser.json());
+routes.use(bodyParser.urlencoded({ extended: true }));
+
+routes.get('/',function(req,res,next) {
+  res.render('user')
 })
 
-routes.post('/',function(request,response,next) {
-  response.send("Send from post method")
+routes.post('/user',function(request,response,next) {
+  console.log(request.body.firstname_form);
+  response.json(request.body.firstname_form)
 })
 
 routes.get('/edit/:id',function(request,response,next) {

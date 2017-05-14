@@ -1,9 +1,35 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Test User</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <title>Input Data User</title>
   </head>
   <body>
-  <%= id %>
+    <form class="col s12" action="/" method="post">
+      <div class="row">
+        <div class="input-field col s12">
+          <text id="firstname_form" class="materialize-text"></text>
+          <label for="firstname_form"> First Name </label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <text id="lastname_form" class="materialize-text"></text>
+          <label for="lastname_form"> Last Name </label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <text id="phone_form" class="materialize-text"></text>
+          <label for="phone_form"> Phone Number </label>
+        </div>
+      </div>
+        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+         <i class="material-icons right"></i>
+        </button>
+    </form>
   </body>
 </html>

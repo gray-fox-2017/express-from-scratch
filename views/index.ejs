@@ -4,6 +4,33 @@
     <title>Express From Stratch</title>
   </head>
   <body>
-  <h1> Test In Port 3000 </h1>
+    <form class="" action="/add" method="post">
+      <input type="text" name="Firstname" placeholder="Firstname">
+      <input type="text" name="Lastname" placeholder="Lastname">
+      <input type="text" name="Phone" placeholder="Phone">
+      <button type="submit"> Submit </button>
+    </form>
+
+    <table>
+      <thead>
+        <tr>
+          <td> ID </td>
+          <td> Firstrname </td>
+          <td> Lastrname </td>
+          <td> Phone</td>
+        </tr>
+      </thead>
+        <tbody>
+          <% datas.forEach((d)=>{ %>
+          <tr>
+            <td><%= d.id %></td>
+            <td><%= d.firstname %></td>
+            <td><%= d.lastname %></td>
+            <td><%= d.phone %></td>
+            <td><a href="/edit/<%= d.id %>">Edit</a> | <a href="delete/<%= d.id %>">Delete</a></td>
+          </tr>
+          <%  }) %>
+        </tbody>
+    </table>
   </body>
 </html>
