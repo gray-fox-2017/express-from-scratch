@@ -1,0 +1,28 @@
+{
+  "name": "express-from-scratch",
+  "version": "0.0.0",
+  "description": "express from scratch",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gray-fox-2017/express-from-scratch.git"
+  },
+  "author": "james sraun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gray-fox-2017/express-from-scratch/issues"
+  },
+  "homepage": "https://github.com/gray-fox-2017/express-from-scratch#readme",
+  "dependencies": {
+    "body": "^5.1.0",
+    "body-parser": "^1.17.1",
+    "ejs": "^2.5.6",
+    "express": "^4.15.2",
+    "parser": "^0.1.4",
+    "sequelize": "^3.30.4",
+    "sqlite3": "^3.1.8"
+  }
+}
