@@ -1,0 +1,22 @@
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/fonts/roboto/Roboto-Bold.woff">
+  <meta charset="utf-8">
+  <title><%-title%></title>
+</head>
+</body>
+  <h1>
+    <marquee>I love <%-message%></marquee>
+  </h1>
+  <table>
+    <tr>
+      <th>Name</th>
+    </tr>
+  </table>
+  <form action='/user/edit/<%-users.id%>' method='post'>
+    <input type="text" name="name" value="<%-users.name%>"><br>
+    <input type="submit" value="submit here">
+  </form>
+</body>
+</html>
